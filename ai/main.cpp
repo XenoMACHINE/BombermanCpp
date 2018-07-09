@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, I'm AI!" << std::endl;
+    std::cout << "START player" << std::endl;
+    std::cout << "STOP player" << std::endl;
     return 0;
 }
