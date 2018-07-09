@@ -3,4 +3,5 @@ project(BombermanCpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(BombermanCpp main.cpp)
+add_subdirectory(ai)
+add_subdirectory(engine)

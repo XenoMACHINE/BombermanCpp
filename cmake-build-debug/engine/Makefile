@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine/CMakeFiles/progress.marks
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,44 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named ai
+# Convenience name for target.
+engine/CMakeFiles/engine.dir/rule:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 engine/CMakeFiles/engine.dir/rule
+.PHONY : engine/CMakeFiles/engine.dir/rule
 
-# Build rule for target.
-ai: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ai
-.PHONY : ai
+# Convenience name for target.
+engine: engine/CMakeFiles/engine.dir/rule
 
-# fast build rule for target.
-ai/fast:
-	$(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/build
-.PHONY : ai/fast
-
-#=============================================================================
-# Target rules for targets named engine
-
-# Build rule for target.
-engine: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 engine
 .PHONY : engine
 
 # fast build rule for target.
 engine/fast:
-	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
 .PHONY : engine/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -144,8 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ai"
 	@echo "... engine"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -157,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

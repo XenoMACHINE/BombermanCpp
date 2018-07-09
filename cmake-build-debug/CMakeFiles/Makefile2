@@ -60,39 +60,112 @@ CMAKE_SOURCE_DIR = /Users/alexandremenielle/Documents/4A/C++/BombermanCpp
 CMAKE_BINARY_DIR = /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/BombermanCpp.dir
+# Directory level rules for directory ai
+
+# Convenience name for "all" pass in the directory.
+ai/all: ai/CMakeFiles/ai.dir/all
+
+.PHONY : ai/all
+
+# Convenience name for "clean" pass in the directory.
+ai/clean: ai/CMakeFiles/ai.dir/clean
+
+.PHONY : ai/clean
+
+# Convenience name for "preinstall" pass in the directory.
+ai/preinstall:
+
+.PHONY : ai/preinstall
+
+#=============================================================================
+# Target rules for target ai/CMakeFiles/ai.dir
 
 # All Build rule for target.
-CMakeFiles/BombermanCpp.dir/all:
-	$(MAKE) -f CMakeFiles/BombermanCpp.dir/build.make CMakeFiles/BombermanCpp.dir/depend
-	$(MAKE) -f CMakeFiles/BombermanCpp.dir/build.make CMakeFiles/BombermanCpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BombermanCpp"
-.PHONY : CMakeFiles/BombermanCpp.dir/all
+ai/CMakeFiles/ai.dir/all:
+	$(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/depend
+	$(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ai"
+.PHONY : ai/CMakeFiles/ai.dir/all
 
 # Include target in all.
-all: CMakeFiles/BombermanCpp.dir/all
+all: ai/CMakeFiles/ai.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BombermanCpp.dir/rule: cmake_check_build_system
+ai/CMakeFiles/ai.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BombermanCpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 ai/CMakeFiles/ai.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/BombermanCpp.dir/rule
+.PHONY : ai/CMakeFiles/ai.dir/rule
 
 # Convenience name for target.
-BombermanCpp: CMakeFiles/BombermanCpp.dir/rule
+ai: ai/CMakeFiles/ai.dir/rule
 
-.PHONY : BombermanCpp
-
-# clean rule for target.
-CMakeFiles/BombermanCpp.dir/clean:
-	$(MAKE) -f CMakeFiles/BombermanCpp.dir/build.make CMakeFiles/BombermanCpp.dir/clean
-.PHONY : CMakeFiles/BombermanCpp.dir/clean
+.PHONY : ai
 
 # clean rule for target.
-clean: CMakeFiles/BombermanCpp.dir/clean
+ai/CMakeFiles/ai.dir/clean:
+	$(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/clean
+.PHONY : ai/CMakeFiles/ai.dir/clean
+
+# clean rule for target.
+clean: ai/CMakeFiles/ai.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory engine
+
+# Convenience name for "all" pass in the directory.
+engine/all: engine/CMakeFiles/engine.dir/all
+
+.PHONY : engine/all
+
+# Convenience name for "clean" pass in the directory.
+engine/clean: engine/CMakeFiles/engine.dir/clean
+
+.PHONY : engine/clean
+
+# Convenience name for "preinstall" pass in the directory.
+engine/preinstall:
+
+.PHONY : engine/preinstall
+
+#=============================================================================
+# Target rules for target engine/CMakeFiles/engine.dir
+
+# All Build rule for target.
+engine/CMakeFiles/engine.dir/all:
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/depend
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target engine"
+.PHONY : engine/CMakeFiles/engine.dir/all
+
+# Include target in all.
+all: engine/CMakeFiles/engine.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+engine/CMakeFiles/engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 engine/CMakeFiles/engine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles 0
+.PHONY : engine/CMakeFiles/engine.dir/rule
+
+# Convenience name for target.
+engine: engine/CMakeFiles/engine.dir/rule
+
+.PHONY : engine
+
+# clean rule for target.
+engine/CMakeFiles/engine.dir/clean:
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/clean
+.PHONY : engine/CMakeFiles/engine.dir/clean
+
+# clean rule for target.
+clean: engine/CMakeFiles/engine.dir/clean
 
 .PHONY : clean
 
