@@ -3,3 +3,6 @@
 
 ai/CMakeFiles/ai.dir/main.cpp.o: ../ai/main.cpp
 
+ai/CMakeFiles/ai.dir/player/Player.cpp.o: ../ai/player/Player.cpp
+ai/CMakeFiles/ai.dir/player/Player.cpp.o: ../ai/player/Player.h
+

@@ -152,6 +152,33 @@ main.cpp.s:
 	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+player/Player.o: player/Player.cpp.o
+
+.PHONY : player/Player.o
+
+# target to build an object file
+player/Player.cpp.o:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/Player.cpp.o
+.PHONY : player/Player.cpp.o
+
+player/Player.i: player/Player.cpp.i
+
+.PHONY : player/Player.i
+
+# target to preprocess a source file
+player/Player.cpp.i:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/Player.cpp.i
+.PHONY : player/Player.cpp.i
+
+player/Player.s: player/Player.cpp.s
+
+.PHONY : player/Player.s
+
+# target to generate assembly for a file
+player/Player.cpp.s:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/Player.cpp.s
+.PHONY : player/Player.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +191,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... player/Player.o"
+	@echo "... player/Player.i"
+	@echo "... player/Player.s"
 .PHONY : help
 
 

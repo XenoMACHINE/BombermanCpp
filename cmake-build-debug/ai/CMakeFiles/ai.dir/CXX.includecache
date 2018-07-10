@@ -10,3 +10,27 @@
 iostream
 -
 
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp
+Player.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
+iostream
+-
+iterator
+-
+random
+-
+sstream
+-
+string
+-
+utility
+-
+vector
+-
+queue
+-
+
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
+string
+-
+

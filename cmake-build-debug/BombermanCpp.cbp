@@ -129,6 +129,12 @@
 		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp">
 			<Option target="ai"/>
 		</Unit>
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp">
+			<Option target="ai"/>
+		</Unit>
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h">
+			<Option target="ai"/>
+		</Unit>
 		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/main.cpp">
 			<Option target="engine"/>
 		</Unit>

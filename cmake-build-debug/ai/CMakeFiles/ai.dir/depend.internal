@@ -3,3 +3,6 @@
 
 ai/CMakeFiles/ai.dir/main.cpp.o
  /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp
+ai/CMakeFiles/ai.dir/player/Player.cpp.o
+ /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp
+ /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
