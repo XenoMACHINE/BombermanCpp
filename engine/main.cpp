@@ -13,8 +13,38 @@ void initPlayers(){
     std::cout << "STOP players" << std::endl;
 }
 
+void println(std::string message){
+    std::cout << message << "\n";
+}
+
 int main() {
-    initSettings();
-    initPlayers();
+    std::string message;
+    std::string mode = "wait";
+    int nbPlayers = 0;
+
+    while (true){
+        std::cin >> message;
+
+        if(message == "START"){
+            mode = "start";
+        }else if(message == "STOP"){
+            mode = "wait";
+        }
+
+        if (mode == "start"){
+            if(message == "PLAYERS"){
+                mode = "players";
+            }
+        }else{
+            if(mode == "players"){
+                nbPlayers = std::stoi(message);
+                std::cout << "nbPlayers : " << nbPlayers << "\n";
+            }
+        }
+        println("mode " + mode);
+
+    }
+
+
     return 0;
 }
