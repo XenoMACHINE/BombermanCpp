@@ -25,19 +25,19 @@ std::string intStr(int i){
 
 int main() {
     std::string message;
-    std::getline(std::cin, message);
 
-    if(nextInputMustBe("START player"))
+    if(nextInputMustBe("START player")){
+        std::getline(std::cin, message);
         idPlayer = std::stoi(message);
+        nextInputMustBe("STOP player");
+    }
 
-    nextInputMustBe("STOP player");
-
-    if(nextInputMustBe("START settings")){
-        std::string line;
-        std::getline(std::cin, line);
-        while(line != "STOP settings"){
-            std::getline(std::cin, line);
-        }
+    if(nextInputMustBe("START settings")) {
+        std::string inputSetting;
+        do {
+            std::getline(std::cin, inputSetting);
+            // TODO : use setting
+        } while(inputSetting != "STOP settings");
     }
 
     int turn = 1;
