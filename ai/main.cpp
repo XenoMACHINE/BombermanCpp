@@ -43,17 +43,17 @@ int main() {
     int turn = 1;
 
     while (true){
-        std::string message;
-        std::getline(std::cin, message);
-        println(message);
+
         std::string input = "START turn " + intStr(turn);
         if(nextInputMustBe(input)){
-            //println(input);
+            //TODO set grid ect
+            input = "STOP turn " + intStr(turn);
+            nextInputMustBe(input);
         }
 
-        println("START ACTION ", turn);
+        println("START action ", turn);
         println("U");
-        println("STOP ACTION ", turn);
+        println("STOP action ", turn);
         turn += 1;
     }
 }
