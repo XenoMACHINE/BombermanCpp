@@ -23,26 +23,23 @@ int main() {
     int nbPlayers = 0;
 
     while (true){
-        std::cin >> message;
+        std::getline(std::cin, message);
 
-        if(message == "START"){
-            mode = "start";
-        }else if(message == "STOP"){
+        //println(message);
+        if(message == "START PLAYERS") {
+            mode = "player";
+        }
+        else if(message == "STOP PLAYERS") {
             mode = "wait";
         }
-
-        if (mode == "start"){
-            if(message == "PLAYERS"){
-                mode = "players";
-            }
-        }else{
-            if(mode == "players"){
-                nbPlayers = std::stoi(message);
-                std::cout << "nbPlayers : " << nbPlayers << "\n";
+        else if(mode == "player") {
+            nbPlayers = std::stoi(message);
+            for (int i = 0; i < nbPlayers; i++) {
+                std::cout << "init player " << i << "\n";
             }
         }
-        println("mode " + mode);
 
+        //println("mode " + mode);
     }
 
     return 0;
