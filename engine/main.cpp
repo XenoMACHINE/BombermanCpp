@@ -6,8 +6,8 @@
 
 int WIDTH = 20;
 int HEIGHT = 20;
-int DELAY = 6;
-int RADIUS = 5;
+int DELAY = 4;
+int RADIUS = 10;
 int BOMBS = 10;
 
 int nbPlayers = 0;
@@ -126,10 +126,12 @@ void initPlayers(){
 
 void addPlayerToGrid(){
     for (Player player : players) {
-        int playerNumber = player.getId();
-        if (player.isBomber())
-            playerNumber += 4;
-        addElement(player.getX(), player.getY(), intStr(playerNumber));
+        if(player.isAlive()){
+            int playerNumber = player.getId();
+            if (player.isBomber())
+                playerNumber += 4;
+            addElement(player.getX(), player.getY(), intStr(playerNumber));
+        }
     }
 }
 
@@ -171,40 +173,80 @@ void reinitBombers(){
     }
 }
 
+int getPlayerIndex(int x, int y){
+    std::string str(1,grid.at(y)[x]);
+    return getPlayerIndex(std::stoi(str));
+}
+
+
+void clearExplosedBombs(){
+    std::vector<Bomb> newBombs;
+    for (int i = 0; i < bombs.size(); i++) {
+        if(bombs.at(i).getTimer() > 0){
+            newBombs.push_back(bombs.at(i));
+        }
+    }
+    bombs.clear();
+    bombs = newBombs;
+}
+
+void updateBombs(){
+    for(int i=0; i<bombs.size(); i++) {
+        bombs.at(i).decrement();
+        Bomb bomb = bombs.at(i);
+        if (bomb.getTimer() == 0) {
+            //Axes X
+            int yBomb = bomb.getY();
+            for (int x = bomb.getX() - RADIUS; x < bomb.getX() + RADIUS; x++) {
+                if(yBomb < grid.size() && x < grid.at(yBomb).size()){
+                    if (grid.at(yBomb)[x] != '_' && grid.at(yBomb)[x] != 'o' && grid.at(yBomb)[x] != '#'){
+                        int index = getPlayerIndex(x,yBomb);
+                        players.at(index).setAlive(false);
+                    }
+                }
+            }
+
+            //Axes Y
+            int xBomb = bomb.getX();
+            for (int y = bomb.getY() - RADIUS; y < bomb.getY() + RADIUS; y++) {
+                if(y < grid.size() && xBomb < grid.at(yBomb).size()) {
+                    if (grid.at(y)[xBomb] != '_' && grid.at(y)[xBomb] != 'o' && grid.at(y)[xBomb] != '#'){
+                        int index = getPlayerIndex(xBomb,y);
+                        players.at(index).setAlive(false);
+                    }
+                }
+            }
+        }
+    }
+    clearExplosedBombs();
+}
+
 void execActions(std::string action, int playerId){
     int index = getPlayerIndex(playerId);
     int x = players.at(index).getY();
     int y = players.at(index).getY();
 
-    if (action == "NOACTION"){
+    if (action == "NOACTION" || players.at(index).isAlive() == false){
         return;
     }
     if (action == "U"){
         if(grid.at(y-1)[x] == '_'){
             players.at(index).setY(y-1);
-        }else if (grid.at(y-1)[x] == 'o'){
-            //TODO BOOM
         }
     }
     if (action == "D"){
         if(grid.at(y+1)[x] == '_'){
             players.at(index).setY(y+1);
-        }else if (grid.at(y+1)[x] == 'o'){
-            //TODO BOOM
         }
     }
     if (action == "L"){
         if(grid.at(x-1)[x] == '_'){
             players.at(index).setY(x-1);
-        }else if (grid.at(y)[x-1] == 'o'){
-            //TODO BOOM
         }
     }
     if (action == "R"){
         if(grid.at(x+1)[x] == '_'){
             players.at(index).setY(x+1);
-        }else if (grid.at(y)[x+1] == 'o'){
-            //TODO BOOM
         }
     }
     if (action[0] == 'B'){
@@ -224,8 +266,8 @@ void execActions(std::string action, int playerId){
         }
         xBomb = std::stoi(xStr);
         yBomb = std::stoi(yStr);
-        if(xBomb > 0 && yBomb > 0){
-            bombs.push_back(Bomb(xBomb,yBomb));
+        if(xBomb > 0 && yBomb > 0 && bombs.size() < BOMBS && grid.at(yBomb)[xBomb] == '_'){
+            bombs.push_back(Bomb(xBomb,yBomb,DELAY));
             players.at(index).setBomber(true);
         }
     }
@@ -233,27 +275,37 @@ void execActions(std::string action, int playerId){
     refreshGrid();
 }
 
+int nbPlayersAlive(){
+    int count = 0;
+    for (Player player : players){
+        if (player.isAlive())
+            count++;
+    }
+    return count;
+}
+
 int main() {
-    /*
+
     //TESTS perso
-    nbPlayers = 4;
+   /*nbPlayers = 4;
     initGrid();
     initPlayers();
     addPlayerToGrid();
-
+    sendGrid();
     bool b = true;
 
     while (true){
         reinitBombers();
-        println("player y : ", players.at(getPlayerIndex(2)).getY());
-        sendGrid();
         execActions("U",2);
         if(b){
-            execActions("B4-12",2);
+            int xplayer = players.at(getPlayerIndex(2)).getX();
+            std::string bombAction = "B" + intStr(xplayer) + "-1";
+            execActions(bombAction,2);
             b = false;
         }
-    }
-    */
+        updateBombs();
+        sendGrid();
+    }*/
 
     nextInputMustBe("START PLAYERS");
     nbPlayers = std::stoi(input());
@@ -269,9 +321,13 @@ int main() {
     while (true){
         reinitBombers();
         for(int i=1; i<nbPlayers+1;i++){
+            if (players.at(getPlayerIndex(i)).isAlive()){
+                //bloquer ici ?
+                // continue;
+            }
             std::cout << "START turn " << turn << " " << i << std::endl;
-            if(turn == 5){
-                println("WINNER ", 3);
+            if(nbPlayersAlive() == 1 && players.at(getPlayerIndex(i)).isAlive()){
+                println("WINNER ", i);
             } else{
                 std::cout << WIDTH << " " << HEIGHT << std::endl;
                 sendGrid();
@@ -285,10 +341,11 @@ int main() {
                 expectInput = "STOP actions " + intStr(turn) + " " + intStr(i);
                 nextInputMustBe(expectInput);
             }
+
+
         }
 
-
-        if (turn == 5){
+        if(nbPlayersAlive() == 1){
             break;
         }
 

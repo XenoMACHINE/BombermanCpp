@@ -10,8 +10,14 @@ class Bomb {
 private:
     int x;
     int y;
+    int timer = 0;
 public:
-    Bomb(int x, int y);
+    int getTimer() const;
+
+    void setTimer(int timer);
+
+public:
+    Bomb(int x, int y, int timer);
 
     int getX() const;
 
@@ -20,6 +26,8 @@ public:
     int getY() const;
 
     void setY(int y);
+
+    void decrement();
 };
 
 

@@ -4,7 +4,7 @@
 
 #include "Bomb.h"
 
-Bomb::Bomb(int x, int y) : x(x), y(y) {}
+Bomb::Bomb(int x, int y, int timer) : x(x), y(y), timer(timer){}
 
 int Bomb::getX() const {
     return x;
@@ -20,4 +20,18 @@ int Bomb::getY() const {
 
 void Bomb::setY(int y) {
     Bomb::y = y;
+}
+
+void Bomb::decrement() {
+    if (this->timer > 0){
+        this->timer--;
+    }
+}
+
+int Bomb::getTimer() const {
+    return timer;
+}
+
+void Bomb::setTimer(int timer) {
+    Bomb::timer = timer;
 }

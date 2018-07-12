@@ -46,3 +46,11 @@ bool Player::isBomber() const {
 void Player::setBomber(bool bomber) {
     Player::bomber = bomber;
 }
+
+bool Player::isAlive() const {
+    return alive;
+}
+
+void Player::setAlive(bool alive) {
+    Player::alive = alive;
+}

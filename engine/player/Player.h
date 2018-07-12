@@ -12,6 +12,12 @@ private:
     int x;
     int y;
     bool bomber = false;
+    bool alive = true;
+public:
+    bool isAlive() const;
+
+    void setAlive(bool alive);
+
 public:
     bool isBomber() const;
 
