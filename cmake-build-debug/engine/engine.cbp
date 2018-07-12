@@ -62,7 +62,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/bomb/Bomb.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/bomb/Bomb.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/main.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/player/Player.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/player/Player.h">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/CMakeLists.txt">

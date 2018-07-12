@@ -65,7 +65,7 @@ int main() {
 
             for (int j = 0; j < height; j++) {
                 std::getline(std::cin, message);
-                println(message);
+                //println(message);
                 grid.push_back(message);
             }
 

@@ -81,17 +81,69 @@ engine/CMakeFiles/engine.dir/main.cpp.o.provides: engine/CMakeFiles/engine.dir/m
 engine/CMakeFiles/engine.dir/main.cpp.o.provides.build: engine/CMakeFiles/engine.dir/main.cpp.o
 
 
+engine/CMakeFiles/engine.dir/player/Player.cpp.o: engine/CMakeFiles/engine.dir/flags.make
+engine/CMakeFiles/engine.dir/player/Player.cpp.o: ../engine/player/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object engine/CMakeFiles/engine.dir/player/Player.cpp.o"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/player/Player.cpp.o -c /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/player/Player.cpp
+
+engine/CMakeFiles/engine.dir/player/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/player/Player.cpp.i"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/player/Player.cpp > CMakeFiles/engine.dir/player/Player.cpp.i
+
+engine/CMakeFiles/engine.dir/player/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/player/Player.cpp.s"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/player/Player.cpp -o CMakeFiles/engine.dir/player/Player.cpp.s
+
+engine/CMakeFiles/engine.dir/player/Player.cpp.o.requires:
+
+.PHONY : engine/CMakeFiles/engine.dir/player/Player.cpp.o.requires
+
+engine/CMakeFiles/engine.dir/player/Player.cpp.o.provides: engine/CMakeFiles/engine.dir/player/Player.cpp.o.requires
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/player/Player.cpp.o.provides.build
+.PHONY : engine/CMakeFiles/engine.dir/player/Player.cpp.o.provides
+
+engine/CMakeFiles/engine.dir/player/Player.cpp.o.provides.build: engine/CMakeFiles/engine.dir/player/Player.cpp.o
+
+
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o: engine/CMakeFiles/engine.dir/flags.make
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o: ../engine/bomb/Bomb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/bomb/Bomb.cpp.o -c /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/bomb/Bomb.cpp
+
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/engine.dir/bomb/Bomb.cpp.i"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/bomb/Bomb.cpp > CMakeFiles/engine.dir/bomb/Bomb.cpp.i
+
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/engine.dir/bomb/Bomb.cpp.s"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/bomb/Bomb.cpp -o CMakeFiles/engine.dir/bomb/Bomb.cpp.s
+
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.requires:
+
+.PHONY : engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.requires
+
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.provides: engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.requires
+	$(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.provides.build
+.PHONY : engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.provides
+
+engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.provides.build: engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o
+
+
 # Object files for target engine
 engine_OBJECTS = \
-"CMakeFiles/engine.dir/main.cpp.o"
+"CMakeFiles/engine.dir/main.cpp.o" \
+"CMakeFiles/engine.dir/player/Player.cpp.o" \
+"CMakeFiles/engine.dir/bomb/Bomb.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
 
 engine/engine: engine/CMakeFiles/engine.dir/main.cpp.o
+engine/engine: engine/CMakeFiles/engine.dir/player/Player.cpp.o
+engine/engine: engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o
 engine/engine: engine/CMakeFiles/engine.dir/build.make
 engine/engine: engine/CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable engine"
 	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/engine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +152,8 @@ engine/CMakeFiles/engine.dir/build: engine/engine
 .PHONY : engine/CMakeFiles/engine.dir/build
 
 engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/main.cpp.o.requires
+engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/player/Player.cpp.o.requires
+engine/CMakeFiles/engine.dir/requires: engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o.requires
 
 .PHONY : engine/CMakeFiles/engine.dir/requires
 

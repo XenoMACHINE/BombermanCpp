@@ -125,6 +125,33 @@ engine/fast:
 	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
+bomb/Bomb.o: bomb/Bomb.cpp.o
+
+.PHONY : bomb/Bomb.o
+
+# target to build an object file
+bomb/Bomb.cpp.o:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.o
+.PHONY : bomb/Bomb.cpp.o
+
+bomb/Bomb.i: bomb/Bomb.cpp.i
+
+.PHONY : bomb/Bomb.i
+
+# target to preprocess a source file
+bomb/Bomb.cpp.i:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.i
+.PHONY : bomb/Bomb.cpp.i
+
+bomb/Bomb.s: bomb/Bomb.cpp.s
+
+.PHONY : bomb/Bomb.s
+
+# target to generate assembly for a file
+bomb/Bomb.cpp.s:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/bomb/Bomb.cpp.s
+.PHONY : bomb/Bomb.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -152,6 +179,33 @@ main.cpp.s:
 	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+player/Player.o: player/Player.cpp.o
+
+.PHONY : player/Player.o
+
+# target to build an object file
+player/Player.cpp.o:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/player/Player.cpp.o
+.PHONY : player/Player.cpp.o
+
+player/Player.i: player/Player.cpp.i
+
+.PHONY : player/Player.i
+
+# target to preprocess a source file
+player/Player.cpp.i:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/player/Player.cpp.i
+.PHONY : player/Player.cpp.i
+
+player/Player.s: player/Player.cpp.s
+
+.PHONY : player/Player.s
+
+# target to generate assembly for a file
+player/Player.cpp.s:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f engine/CMakeFiles/engine.dir/build.make engine/CMakeFiles/engine.dir/player/Player.cpp.s
+.PHONY : player/Player.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,9 +215,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... engine"
+	@echo "... bomb/Bomb.o"
+	@echo "... bomb/Bomb.i"
+	@echo "... bomb/Bomb.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... player/Player.o"
+	@echo "... player/Player.i"
+	@echo "... player/Player.s"
 .PHONY : help
 
 
