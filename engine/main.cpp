@@ -277,6 +277,7 @@ void execActions(std::string action, int playerId){
     }
     if (action == "B"){
         plantBomb(players.at(index));
+        players.at(index).setBomber(true);
     }
     if (action[0] == 'B' && action.length() > 1){
         int xBomb = 0, yBomb = 0;
