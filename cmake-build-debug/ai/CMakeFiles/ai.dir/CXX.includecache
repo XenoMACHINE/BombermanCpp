@@ -11,6 +11,8 @@ iostream
 -
 vector
 -
+player/Player.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
 
 /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp
 Player.h

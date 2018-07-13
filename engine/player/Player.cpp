@@ -13,6 +13,7 @@ Player::Player(int id, int maxX, int maxY) {
     this->id = id;
     this->x = rand() % maxX + 1;
     this->y = rand() % maxY + 1;
+    this->lastMovement = 'D';
 }
 
 int Player::getX() const {
@@ -53,4 +54,12 @@ bool Player::isAlive() const {
 
 void Player::setAlive(bool alive) {
     Player::alive = alive;
+}
+
+char Player::getLastMovement() const {
+    return lastMovement;
+}
+
+void Player::setLastMovement(char lastMovement) {
+    Player::lastMovement = lastMovement;
 }

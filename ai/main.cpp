@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
+#include "player/Player.h"
 
+Player player = Player(0);
 int idPlayer = 0;
 int width = 0;
 int height = 0;
@@ -42,6 +44,8 @@ int main() {
         nextInputMustBe("STOP player");
     }
 
+    player = Player(idPlayer);
+
     if(nextInputMustBe("START settings")) {
         std::string inputSetting;
         do {
@@ -65,7 +69,6 @@ int main() {
 
             for (int j = 0; j < height; j++) {
                 std::getline(std::cin, message);
-                //println(message);
                 grid.push_back(message);
             }
 
@@ -73,9 +76,16 @@ int main() {
             nextInputMustBe(expectedInput);
         }
 
-        println("START action ", turn);
-        println("U");
-        println("STOP action ", turn);
+        player.startAction(turn);
+        //player.randomAction();
+        player.goUp();
+        if(turn % 2 == 0){
+            player.sendBomb();
+            player.goDown();
+            player.goLeft();
+            player.goDown();
+        }
+        player.stopAction(turn);
         turn += 1;
     }
 }

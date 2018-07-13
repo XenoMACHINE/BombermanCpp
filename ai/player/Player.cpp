@@ -22,8 +22,16 @@ int rowNum[] = {-1, 0, 0, 1};
 int colNum[] = {0, -1, 1, 0};
 
 Player::Player(int id) {
-    this->initPlayer(id);
-    this->initSettings();
+    this->id = id;
+}
+
+int getRandom(int min, int max){
+    std::random_device rd;     // only used once to initialise (seed) engine
+    std::mt19937 rng(rd());    // random-number engine used (Mersenne-Twister in this case)
+    std::uniform_int_distribution<int> uni(min,max); // guaranteed unbiased
+
+    auto random_integer = uni(rng);
+    return random_integer;
 }
 
 void Player::startAction(const int& turn) const {
@@ -56,6 +64,33 @@ void Player::goLeft()  {
 }
 
 void Player::goRight() {
+    std::cout << "R" << std::endl;
+}
+
+void Player::randomAction() {
+    int nbActions = getRandom(1,3);
+    for (int i=0; i<nbActions; i++){
+        switch (getRandom(0,5)){
+            case 0:
+                doNothing();
+                break;
+            case 1:
+                goUp();
+                break;
+            case 2:
+                goDown();
+                break;
+            case 3:
+                goRight();
+                break;
+            case 4:
+                goLeft();
+                break;
+            case 5:
+                sendBomb();
+                break;
+        }
+    }
     std::cout << "R" << std::endl;
 }
 

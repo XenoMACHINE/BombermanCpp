@@ -7,7 +7,7 @@
 int WIDTH = 20;
 int HEIGHT = 20;
 int DELAY = 4;
-int RADIUS = 10;
+int RADIUS = 3;
 int BOMBS = 10;
 
 int nbPlayers = 0;
@@ -190,6 +190,28 @@ void clearExplosedBombs(){
     bombs = newBombs;
 }
 
+void plantBomb(Player player){
+    int x = player.getX(), y =player.getY();
+    switch (player.getLastMovement()){
+        case 'U':
+            if(grid.at(y-1)[x] == '_')
+                bombs.push_back(Bomb(x,y-1,DELAY));
+            break;
+        case 'D':
+            if(grid.at(y+1)[x] == '_')
+                bombs.push_back(Bomb(x,y+1,DELAY));
+            break;
+        case 'L':
+            if(grid.at(y)[x-1] == '_')
+                bombs.push_back(Bomb(x-1,y,DELAY));
+            break;
+        case 'R':
+            if(grid.at(y)[x+1] == '_')
+                bombs.push_back(Bomb(x+1,y,DELAY));
+            break;
+    }
+}
+
 void updateBombs(){
     for(int i=0; i<bombs.size(); i++) {
         bombs.at(i).decrement();
@@ -223,7 +245,7 @@ void updateBombs(){
 
 void execActions(std::string action, int playerId){
     int index = getPlayerIndex(playerId);
-    int x = players.at(index).getY();
+    int x = players.at(index).getX();
     int y = players.at(index).getY();
 
     if (action == "NOACTION" || players.at(index).isAlive() == false){
@@ -232,24 +254,31 @@ void execActions(std::string action, int playerId){
     if (action == "U"){
         if(grid.at(y-1)[x] == '_'){
             players.at(index).setY(y-1);
+            players.at(index).setLastMovement('U');
         }
     }
     if (action == "D"){
         if(grid.at(y+1)[x] == '_'){
             players.at(index).setY(y+1);
+            players.at(index).setLastMovement('D');
         }
     }
     if (action == "L"){
         if(grid.at(x-1)[x] == '_'){
             players.at(index).setY(x-1);
+            players.at(index).setLastMovement('L');
         }
     }
     if (action == "R"){
         if(grid.at(x+1)[x] == '_'){
             players.at(index).setY(x+1);
+            players.at(index).setLastMovement('R');
         }
     }
-    if (action[0] == 'B'){
+    if (action == "B"){
+        plantBomb(players.at(index));
+    }
+    if (action[0] == 'B' && action.length() > 1){
         int xBomb = 0, yBomb = 0;
         std::string xStr, yStr;
         bool xFound = false;
@@ -287,7 +316,7 @@ int nbPlayersAlive(){
 int main() {
 
     //TESTS perso
-   /*nbPlayers = 4;
+    /*nbPlayers = 4;
     initGrid();
     initPlayers();
     addPlayerToGrid();
@@ -298,12 +327,11 @@ int main() {
         reinitBombers();
         execActions("U",2);
         if(b){
-            int xplayer = players.at(getPlayerIndex(2)).getX();
-            std::string bombAction = "B" + intStr(xplayer) + "-1";
-            execActions(bombAction,2);
+            execActions("B",2);
             b = false;
         }
         updateBombs();
+        refreshGrid();
         sendGrid();
     }*/
 
@@ -320,32 +348,35 @@ int main() {
     int turn = 1;
     while (true){
         reinitBombers();
+        updateBombs();
         for(int i=1; i<nbPlayers+1;i++){
             if (players.at(getPlayerIndex(i)).isAlive()){
                 //bloquer ici ?
                 // continue;
             }
             std::cout << "START turn " << turn << " " << i << std::endl;
-            if(nbPlayersAlive() == 1 && players.at(getPlayerIndex(i)).isAlive()){
+            if(nbPlayersAlive() <= 1 && players.at(getPlayerIndex(i)).isAlive()){
                 println("WINNER ", i);
             } else{
                 std::cout << WIDTH << " " << HEIGHT << std::endl;
+                refreshGrid();
                 sendGrid();
             }
             std::cout << "STOP turn " << turn << " " << i << std::endl;
 
             std::string expectInput = "START actions " + intStr(turn) + " " + intStr(i);
             if (nextInputMustBe(expectInput)){
-                std::string action = input();
-                execActions(action, i);
                 expectInput = "STOP actions " + intStr(turn) + " " + intStr(i);
-                nextInputMustBe(expectInput);
+                while (true){
+                    std::string action = input();
+                    if(action == expectInput)
+                        break;
+                    execActions(action, i);
+                }
             }
-
-
         }
 
-        if(nbPlayersAlive() == 1){
+        if(nbPlayersAlive() <= 1){
             break;
         }
 

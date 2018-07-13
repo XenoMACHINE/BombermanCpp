@@ -12,7 +12,14 @@ private:
     int x;
     int y;
     bool bomber = false;
+public:
+    char getLastMovement() const;
+
+    void setLastMovement(char lastMovement);
+
+private:
     bool alive = true;
+    char lastMovement;
 public:
     bool isAlive() const;
 
