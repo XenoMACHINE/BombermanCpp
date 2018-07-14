@@ -3,11 +3,8 @@
 
 ai/CMakeFiles/ai.dir/main.cpp.o
  /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp
- /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.h
  /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.h
  /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.h
-ai/CMakeFiles/ai.dir/player/AlgoDecision.cpp.o
- /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.cpp
 ai/CMakeFiles/ai.dir/player/Astar.cpp.o
  /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp
  /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.h

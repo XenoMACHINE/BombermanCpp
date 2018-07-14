@@ -2,7 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ai.dir/main.cpp.o"
   "CMakeFiles/ai.dir/player/Player.cpp.o"
   "CMakeFiles/ai.dir/player/Astar.cpp.o"
-  "CMakeFiles/ai.dir/player/AlgoDecision.cpp.o"
   "ai.pdb"
   "ai"
 )

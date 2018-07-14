@@ -152,33 +152,6 @@ main.cpp.s:
 	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-player/AlgoDecision.o: player/AlgoDecision.cpp.o
-
-.PHONY : player/AlgoDecision.o
-
-# target to build an object file
-player/AlgoDecision.cpp.o:
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/AlgoDecision.cpp.o
-.PHONY : player/AlgoDecision.cpp.o
-
-player/AlgoDecision.i: player/AlgoDecision.cpp.i
-
-.PHONY : player/AlgoDecision.i
-
-# target to preprocess a source file
-player/AlgoDecision.cpp.i:
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/AlgoDecision.cpp.i
-.PHONY : player/AlgoDecision.cpp.i
-
-player/AlgoDecision.s: player/AlgoDecision.cpp.s
-
-.PHONY : player/AlgoDecision.s
-
-# target to generate assembly for a file
-player/AlgoDecision.cpp.s:
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/AlgoDecision.cpp.s
-.PHONY : player/AlgoDecision.cpp.s
-
 player/Astar.o: player/Astar.cpp.o
 
 .PHONY : player/Astar.o
@@ -245,9 +218,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... player/AlgoDecision.o"
-	@echo "... player/AlgoDecision.i"
-	@echo "... player/AlgoDecision.s"
 	@echo "... player/Astar.o"
 	@echo "... player/Astar.i"
 	@echo "... player/Astar.s"

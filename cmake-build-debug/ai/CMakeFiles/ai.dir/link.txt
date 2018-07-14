@@ -1,1 +1,1 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ai.dir/main.cpp.o CMakeFiles/ai.dir/player/Player.cpp.o CMakeFiles/ai.dir/player/Astar.cpp.o CMakeFiles/ai.dir/player/AlgoDecision.cpp.o  -o ai 
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/ai.dir/main.cpp.o CMakeFiles/ai.dir/player/Player.cpp.o CMakeFiles/ai.dir/player/Astar.cpp.o  -o ai 

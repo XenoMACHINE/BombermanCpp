@@ -65,12 +65,6 @@
 		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp">
 			<Option target="ai"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.cpp">
-			<Option target="ai"/>
-		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.h">
-			<Option target="ai"/>
-		</Unit>
 		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp">
 			<Option target="ai"/>
 		</Unit>

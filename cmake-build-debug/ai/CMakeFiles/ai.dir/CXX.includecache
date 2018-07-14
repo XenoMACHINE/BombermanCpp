@@ -15,14 +15,8 @@ stdlib.h
 -
 player/Player.h
 /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.h
-player/AlgoDecision.h
-/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.h
 player/Astar.h
 /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.h
-
-/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.cpp
-
-/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.h
 
 /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp
 Astar.h

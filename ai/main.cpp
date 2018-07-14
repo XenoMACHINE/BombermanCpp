@@ -161,7 +161,6 @@ int main() {
         nextInputMustBe("STOP player");
     }
 
-    println("HERE SETTINGS");
 
     player = Player(idPlayer);
 
@@ -192,7 +191,7 @@ int main() {
         grid.push_back("#__________________#");
         grid.push_back("#_____________o____#");
         grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
+        grid.push_back("#______________o___#");
         grid.push_back("#_____________1____#");
         grid.push_back("#__________________#");
         grid.push_back("#___o______________#");
@@ -220,19 +219,34 @@ int main() {
             nextInputMustBe(expectedInput);
         }
 
-        //TODO
-        string res = IaAlgorithm(/*height*/20, /*width*/20);
+        string resDecision = IaAlgorithm(/*height*/20, /*width*/20);
 
 
         player.startAction(turn);
-        //player.randomAction();
+
+        for (auto c : resDecision)
+        {
+            if (c == '0')
+                player.goDown();
+            if (c == '1')
+                player.goRight();
+            if (c == '2')
+                player.goUp();
+            if (c == '3')
+                player.goLeft();
+            if (turn % 3 == 0)
+                player.sendBomb();
+        }
+        /*player.randomAction();
         player.goUp();
         if(turn % 2 == 0){
             player.sendBomb();
             player.goDown();
             player.goLeft();
             player.goDown();
-        }
+        }*/
+
+
         player.stopAction(turn);
         turn += 1;
     }
