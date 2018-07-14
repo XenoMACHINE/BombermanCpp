@@ -134,7 +134,7 @@ int main() {
 
     std::string message;
 
-    if(nextInputMustBe("START player")){
+    if(nextInputMustBe("START player")) {
         std::getline(std::cin, message);
         idPlayer = std::stoi(message);
         nextInputMustBe("STOP player");
@@ -156,6 +156,27 @@ int main() {
     while (true){
         std::string message;
 
+        /*grid.push_back("####################");
+        grid.push_back("#__________________#");
+        grid.push_back("#___o______________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_____________o____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_________________o#");
+        grid.push_back("#______o___________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_____________o____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#______________o___#");
+        grid.push_back("#_____________1____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#___o______________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("####################");*/
+
         std::string expectedInput = "START turn " + intStr(turn);
         if(nextInputMustBe(expectedInput)) {
             //TODO set grid ect
@@ -174,6 +195,8 @@ int main() {
             expectedInput = "STOP turn " + intStr(turn);
             nextInputMustBe(expectedInput);
         }
+
+
 
         string resDecision = IaAlgorithm(/*height*/20, /*width*/20);
 
