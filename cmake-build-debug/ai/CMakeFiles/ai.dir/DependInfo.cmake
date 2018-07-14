@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp" "/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/main.cpp.o"
-  "/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp" "/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/player/Player.cpp.o"
+  "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp" "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/main.cpp.o"
+  "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/AlgoDecision.cpp" "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/player/AlgoDecision.cpp.o"
+  "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp" "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/player/Astar.cpp.o"
+  "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.cpp" "/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/player/Player.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

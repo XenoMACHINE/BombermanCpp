@@ -1,12 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <stdlib.h>
 #include "player/Player.h"
+#include "player/Astar.h"
+
+
+using namespace std;
 
 Player player = Player(0);
 int idPlayer = 0;
 int width = 0;
 int height = 0;
 std::vector<std::string> grid;
+int radius = 4;
+
 
 void println(std::string message){
     std::cout << message << std::endl;
@@ -35,7 +42,117 @@ std::string intStr(int i){
     return std::to_string(i);
 }
 
+
+string IaAlgorithm(int height, int width)
+{
+    println("ALGORITHM DECISION + ASTAR");
+    vector<vector<int>> map(width, vector<int>(height, 0));
+    vector<vector<int>> map_decision(width, vector<int>(height, 0));
+
+
+    //Setting map
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            map[i][j] = 0;
+            map_decision[i][j] = 0;
+        }
+    }
+
+    int xPlayer;
+    int yPlayer;
+
+    int indexH = 0;
+    for (auto line : grid)
+    {
+        int index = 0;
+
+        for (char& c : line)
+        {
+            if (indexH < height && index < width)
+            {
+                switch (c)
+                {
+                    case '_': //Empty
+                        if (map[indexH][index] != 1)
+                            map[indexH][index] = 0;
+                        if (map_decision[indexH][index] != 1)
+                            map_decision[indexH][index] = 0;
+                        break;
+                    case '#': //Wall
+                        map[indexH][index] = 1;
+                        map_decision[indexH][index] = 1;
+                        break;
+                    case 'o': //Bomb
+
+                        map[indexH][index] = 1;
+                        map_decision[indexH][index] = 1;
+
+                        for (int h = 1; h <= radius; h++)
+                        {
+                            if (indexH + h < height)
+                                map_decision[indexH + h][index] = 1;
+                            if (index + h < width)
+                                map_decision[indexH][index + h] = 1;
+                            if (indexH - h > 0)
+                                map_decision[indexH - h][index] = 1;
+                            if (index + h > 0)
+                                map_decision[indexH][index - h] = 1;
+                        }
+                        break;
+                    default: //Player
+                        map[indexH][index] = 2;
+                        map_decision[indexH][index] = 2;
+                        xPlayer = indexH;
+                        yPlayer = index;
+                        break;
+                }
+            }
+            index += 1;
+        }
+        indexH += 1;
+    }
+
+    //Pass map to Astar Object
+    Astar astar(height, width, xPlayer, yPlayer);
+    astar.map = map;
+
+    astar.searchDestination(map_decision);
+
+    string resultPath = astar.findPath(astar.xDest, astar.yDest);
+
+    //0 Bas; 1Droite; 2Haut; 3Gauche
+    //Print Map
+    println("Print Map");
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            std::cout << astar.map[i][j];
+        }
+        std::cout << std::endl;
+    }
+    //Print MapDecision
+    println("Print MapDecision");
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            std::cout << map_decision[i][j];
+        }
+        std::cout << std::endl;
+    }
+
+    return resultPath;
+
+
+}
+
+
+
 int main() {
+
     std::string message;
 
     if(nextInputMustBe("START player")){
@@ -43,6 +160,8 @@ int main() {
         idPlayer = std::stoi(message);
         nextInputMustBe("STOP player");
     }
+
+    println("HERE SETTINGS");
 
     player = Player(idPlayer);
 
@@ -59,6 +178,29 @@ int main() {
     while (true){
         std::string message;
 
+        //Nam: Pour debug
+        grid.push_back("####################");
+        grid.push_back("#__________________#");
+        grid.push_back("#___o______________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_____________o____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_________________o#");
+        grid.push_back("#______o___________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_____________o____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_____________1____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#___o______________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("####################");
+
+
         std::string expectedInput = "START turn " + intStr(turn);
         if(nextInputMustBe(expectedInput)) {
             //TODO set grid ect
@@ -72,9 +214,15 @@ int main() {
                 grid.push_back(message);
             }
 
+
+
             expectedInput = "STOP turn " + intStr(turn);
             nextInputMustBe(expectedInput);
         }
+
+        //TODO
+        string res = IaAlgorithm(/*height*/20, /*width*/20);
+
 
         player.startAction(turn);
         //player.randomAction();
@@ -88,4 +236,6 @@ int main() {
         player.stopAction(turn);
         turn += 1;
     }
+
 }
+
