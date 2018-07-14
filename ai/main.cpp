@@ -45,7 +45,6 @@ std::string intStr(int i){
 
 string IaAlgorithm(int height, int width)
 {
-    println("ALGORITHM DECISION + ASTAR");
     vector<vector<int>> map(width, vector<int>(height, 0));
     vector<vector<int>> map_decision(width, vector<int>(height, 0));
 
@@ -123,26 +122,6 @@ string IaAlgorithm(int height, int width)
     string resultPath = astar.findPath(astar.xDest, astar.yDest);
 
     //0 Bas; 1Droite; 2Haut; 3Gauche
-    //Print Map
-    println("Print Map");
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            std::cout << astar.map[i][j];
-        }
-        std::cout << std::endl;
-    }
-    //Print MapDecision
-    println("Print MapDecision");
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            std::cout << map_decision[i][j];
-        }
-        std::cout << std::endl;
-    }
 
     return resultPath;
 
@@ -176,29 +155,6 @@ int main() {
 
     while (true){
         std::string message;
-
-        //Nam: Pour debug
-        grid.push_back("####################");
-        grid.push_back("#__________________#");
-        grid.push_back("#___o______________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#_____________o____#");
-        grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#_________________o#");
-        grid.push_back("#______o___________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#_____________o____#");
-        grid.push_back("#__________________#");
-        grid.push_back("#______________o___#");
-        grid.push_back("#_____________1____#");
-        grid.push_back("#__________________#");
-        grid.push_back("#___o______________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
-        grid.push_back("####################");
-
 
         std::string expectedInput = "START turn " + intStr(turn);
         if(nextInputMustBe(expectedInput)) {
