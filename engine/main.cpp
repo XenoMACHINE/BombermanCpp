@@ -6,7 +6,7 @@
 
 int WIDTH = 20;
 int HEIGHT = 20;
-int DELAY = 4;
+int DELAY = 1;
 int RADIUS = 3;
 int BOMBS = 10;
 
@@ -128,8 +128,8 @@ void addPlayerToGrid(){
     for (Player player : players) {
         if(player.isAlive()){
             int playerNumber = player.getId();
-            if (player.isBomber())
-                playerNumber += 4;
+            //if (player.isBomber())
+            //    playerNumber += 4;
             addElement(player.getX(), player.getY(), intStr(playerNumber));
         }
     }
@@ -157,7 +157,9 @@ int getPlayerIndex(int id){
 
 void addBombsToGrid(){
     for (Bomb bomb : bombs) {
-        addElement(bomb.getX(), bomb.getY(), "o");
+        if(bomb.getTimer() == 1){
+            addElement(bomb.getX(), bomb.getY(), "o");
+        }
     }
 }
 
@@ -354,10 +356,7 @@ int main() {
         reinitBombers();
         updateBombs();
         for(int i=1; i<nbPlayers+1;i++){
-            if (players.at(getPlayerIndex(i)).isAlive()){
-                //bloquer ici ?
-                // continue;
-            }
+            //if (players.at(getPlayerIndex(i)).isAlive()){ continue; }  //bloquer ici ?
             std::cout << "START turn " << turn << " " << i << std::endl;
             if(nbPlayersAlive() <= 1 && players.at(getPlayerIndex(i)).isAlive()){
                 println("WINNER ", i);
