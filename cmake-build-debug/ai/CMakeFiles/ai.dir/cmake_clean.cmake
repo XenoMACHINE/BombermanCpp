@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ai.dir/main.cpp.o"
   "CMakeFiles/ai.dir/player/Player.cpp.o"
+  "CMakeFiles/ai.dir/player/Astar.cpp.o"
   "ai.pdb"
   "ai"
 )

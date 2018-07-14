@@ -152,6 +152,33 @@ main.cpp.s:
 	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+player/Astar.o: player/Astar.cpp.o
+
+.PHONY : player/Astar.o
+
+# target to build an object file
+player/Astar.cpp.o:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/Astar.cpp.o
+.PHONY : player/Astar.cpp.o
+
+player/Astar.i: player/Astar.cpp.i
+
+.PHONY : player/Astar.i
+
+# target to preprocess a source file
+player/Astar.cpp.i:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/Astar.cpp.i
+.PHONY : player/Astar.cpp.i
+
+player/Astar.s: player/Astar.cpp.s
+
+.PHONY : player/Astar.s
+
+# target to generate assembly for a file
+player/Astar.cpp.s:
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(MAKE) -f ai/CMakeFiles/ai.dir/build.make ai/CMakeFiles/ai.dir/player/Astar.cpp.s
+.PHONY : player/Astar.cpp.s
+
 player/Player.o: player/Player.cpp.o
 
 .PHONY : player/Player.o
@@ -191,6 +218,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... player/Astar.o"
+	@echo "... player/Astar.i"
+	@echo "... player/Astar.s"
 	@echo "... player/Player.o"
 	@echo "... player/Player.i"
 	@echo "... player/Player.s"
