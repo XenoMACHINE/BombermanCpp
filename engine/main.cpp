@@ -191,6 +191,9 @@ void clearExplosedBombs(){
 }
 
 void plantBomb(Player player){
+    if (bombs.size() >= BOMBS){
+        return;
+    }
     int x = player.getX(), y =player.getY();
     switch (player.getLastMovement()){
         case 'U':
