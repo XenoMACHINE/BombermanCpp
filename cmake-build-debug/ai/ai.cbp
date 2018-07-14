@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;CMake Files\ai\;CMake Files\engine\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai"/>
+				<Option working_dir="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ai">
-				<Option output="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/ai" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai"/>
+				<Option output="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/ai" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 ai"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 ai"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ai/fast">
-				<Option output="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/ai" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai"/>
+				<Option output="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/ai" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,35 +55,35 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 ai/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 ai/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp">
 			<Option target="ai"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.cpp">
 			<Option target="ai"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.h">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.h">
 			<Option target="ai"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.cpp">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp">
 			<Option target="ai"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.h">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h">
 			<Option target="ai"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/CMakeLists.txt">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/CMakeLists.txt">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\ai\"/>
 		</Unit>
-		<Unit filename="/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/engine/CMakeLists.txt">
+		<Unit filename="/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\engine\"/>
 		</Unit>
 	</Project>

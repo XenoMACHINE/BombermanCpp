@@ -43,10 +43,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp
+CMAKE_SOURCE_DIR = /Users/alexandremenielle/Documents/4A/C++/BombermanCpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include ai/CMakeFiles/ai.dir/depend.make
@@ -59,16 +59,16 @@ include ai/CMakeFiles/ai.dir/flags.make
 
 ai/CMakeFiles/ai.dir/main.cpp.o: ai/CMakeFiles/ai.dir/flags.make
 ai/CMakeFiles/ai.dir/main.cpp.o: ../ai/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ai/CMakeFiles/ai.dir/main.cpp.o"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ai.dir/main.cpp.o -c /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object ai/CMakeFiles/ai.dir/main.cpp.o"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ai.dir/main.cpp.o -c /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp
 
 ai/CMakeFiles/ai.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ai.dir/main.cpp.i"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp > CMakeFiles/ai.dir/main.cpp.i
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp > CMakeFiles/ai.dir/main.cpp.i
 
 ai/CMakeFiles/ai.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai.dir/main.cpp.s"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/main.cpp -o CMakeFiles/ai.dir/main.cpp.s
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp -o CMakeFiles/ai.dir/main.cpp.s
 
 ai/CMakeFiles/ai.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ ai/CMakeFiles/ai.dir/main.cpp.o.provides.build: ai/CMakeFiles/ai.dir/main.cpp.o
 
 ai/CMakeFiles/ai.dir/player/Player.cpp.o: ai/CMakeFiles/ai.dir/flags.make
 ai/CMakeFiles/ai.dir/player/Player.cpp.o: ../ai/player/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ai/CMakeFiles/ai.dir/player/Player.cpp.o"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ai.dir/player/Player.cpp.o -c /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ai/CMakeFiles/ai.dir/player/Player.cpp.o"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ai.dir/player/Player.cpp.o -c /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp
 
 ai/CMakeFiles/ai.dir/player/Player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ai.dir/player/Player.cpp.i"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.cpp > CMakeFiles/ai.dir/player/Player.cpp.i
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp > CMakeFiles/ai.dir/player/Player.cpp.i
 
 ai/CMakeFiles/ai.dir/player/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai.dir/player/Player.cpp.s"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Player.cpp -o CMakeFiles/ai.dir/player/Player.cpp.s
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp -o CMakeFiles/ai.dir/player/Player.cpp.s
 
 ai/CMakeFiles/ai.dir/player/Player.cpp.o.requires:
 
@@ -107,16 +107,16 @@ ai/CMakeFiles/ai.dir/player/Player.cpp.o.provides.build: ai/CMakeFiles/ai.dir/pl
 
 ai/CMakeFiles/ai.dir/player/Astar.cpp.o: ai/CMakeFiles/ai.dir/flags.make
 ai/CMakeFiles/ai.dir/player/Astar.cpp.o: ../ai/player/Astar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ai/CMakeFiles/ai.dir/player/Astar.cpp.o"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ai.dir/player/Astar.cpp.o -c /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ai/CMakeFiles/ai.dir/player/Astar.cpp.o"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ai.dir/player/Astar.cpp.o -c /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.cpp
 
 ai/CMakeFiles/ai.dir/player/Astar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ai.dir/player/Astar.cpp.i"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp > CMakeFiles/ai.dir/player/Astar.cpp.i
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.cpp > CMakeFiles/ai.dir/player/Astar.cpp.i
 
 ai/CMakeFiles/ai.dir/player/Astar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ai.dir/player/Astar.cpp.s"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai/player/Astar.cpp -o CMakeFiles/ai.dir/player/Astar.cpp.s
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.cpp -o CMakeFiles/ai.dir/player/Astar.cpp.s
 
 ai/CMakeFiles/ai.dir/player/Astar.cpp.o.requires:
 
@@ -143,8 +143,8 @@ ai/ai: ai/CMakeFiles/ai.dir/player/Player.cpp.o
 ai/ai: ai/CMakeFiles/ai.dir/player/Astar.cpp.o
 ai/ai: ai/CMakeFiles/ai.dir/build.make
 ai/ai: ai/CMakeFiles/ai.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ai"
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ai.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ai"
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ai.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 ai/CMakeFiles/ai.dir/build: ai/ai
@@ -158,10 +158,10 @@ ai/CMakeFiles/ai.dir/requires: ai/CMakeFiles/ai.dir/player/Astar.cpp.o.requires
 .PHONY : ai/CMakeFiles/ai.dir/requires
 
 ai/CMakeFiles/ai.dir/clean:
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai && $(CMAKE_COMMAND) -P CMakeFiles/ai.dir/cmake_clean.cmake
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai && $(CMAKE_COMMAND) -P CMakeFiles/ai.dir/cmake_clean.cmake
 .PHONY : ai/CMakeFiles/ai.dir/clean
 
 ai/CMakeFiles/ai.dir/depend:
-	cd /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/ai /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai /Users/zeke/Desktop/Nam/ESGI/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/alexandremenielle/Documents/4A/C++/BombermanCpp /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/cmake-build-debug/ai/CMakeFiles/ai.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ai/CMakeFiles/ai.dir/depend
 
