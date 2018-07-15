@@ -223,6 +223,10 @@ void plantBomb(Player player){
             if(grid.at(y)[x+1] == '_')
                 bombs.push_back(Bomb(x+1,y,DELAY));
             break;
+        default:
+            if(grid.at(y+1)[x] == '_')
+                bombs.push_back(Bomb(x,y+1,DELAY));
+
     }
 }
 
@@ -364,9 +368,11 @@ int main() {
     while (true){
         reinitBombers();
         updateBombs();
-        for(int i=1; i<nbPlayers+1;i++){
+        //for(int i=1; i<nbPlayers+1;i++){
+        for(Player player : players){
+            int i = player.getId();
             //if (!players.at(getPlayerIndex(i)).isAlive()){ continue; }  //bloquer ici ?
-            std::cout << "START turn " << turn << " " << i << std::endl;
+            std::cout << "START turn " << turn << " " << player.getId() << std::endl;
             if(nbPlayersAlive() <= 1 && players.at(getPlayerIndex(i)).isAlive()){
                 println("WINNER ", i);
             } else{
@@ -383,9 +389,9 @@ int main() {
                     std::string action = input();
                     if(action == expectInput)
                         break;
-                    if(isPlayerAlive(i)){
+                    //if(isPlayerAlive(i)){
                         execActions(action, i);
-                    }
+                    //}
                 }
             }
         }

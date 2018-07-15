@@ -140,7 +140,6 @@ int main() {
         nextInputMustBe("STOP player");
     }
 
-
     player = Player(idPlayer);
 
     if(nextInputMustBe("START settings")) {
@@ -196,12 +195,12 @@ int main() {
             nextInputMustBe(expectedInput);
         }
 
-
-
-        string resDecision = IaAlgorithm(/*height*/20, /*width*/20);
-
-
         player.startAction(turn);
+
+
+        player.randomAction();
+        /*
+        string resDecision = IaAlgorithm(height, width);
 
         for (auto c : resDecision)
         {
