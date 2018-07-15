@@ -178,24 +178,26 @@ int main() {
     if(nextInputMustBe("START settings")) {
         std::string inputSetting;
         do {
-            std::getline(std::cin, inputSetting);
-            if (inputSetting.substr(0, inputSetting.find(" ")) == "NB_BOMBS")
-            {
-                string nbStr = inputSetting.substr(1, inputSetting.find(" "));
-                number_Bombs = stoi(nbStr);
+            std::cin >> inputSetting;
+
+            if(inputSetting == "NB_BOMBS"){
+                std::cin >> inputSetting;
+                number_Bombs = std::stoi(inputSetting);
             }
-            if (inputSetting.substr(0, inputSetting.find(" ")) == "BOMB_DURATION")
-            {
-                string nbStr = inputSetting.substr(1, inputSetting.find(" "));
-                duration_Bombs = stoi(nbStr);
+
+            if(inputSetting == "BOMB_DURATION"){
+                std::cin >> inputSetting;
+                duration_Bombs = std::stoi(inputSetting);
             }
-            if (inputSetting.substr(0, inputSetting.find(" ")) == "BOMB_RADIUS")
-            {
-                string nbStr = inputSetting.substr(1, inputSetting.find(" "));
-                radius_Bombs = stoi(nbStr);
+
+            if(inputSetting == "BOMB_RADIUS"){
+                std::cin >> inputSetting;
+                radius_Bombs = std::stoi(inputSetting);
             }
-        } while(inputSetting != "STOP settings");
+
+        } while(inputSetting != "STOP");
     }
+
 
     int turn = 1;
 
@@ -246,7 +248,7 @@ int main() {
 
         player.startAction(turn);
 
-        string resDecision = IaAlgorithm(height, width);
+        /*string resDecision = IaAlgorithm(height, width);
 
         for (auto c : resDecision)
         {
@@ -258,7 +260,9 @@ int main() {
                 player.goUp();
             if (c == '3')
                 player.goLeft();
-        }
+        }*/
+
+        player.randomAction(1);
 
         if (turn % 2 == 0) {
             player.randomAction(1);
