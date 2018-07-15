@@ -104,10 +104,12 @@ std::string getLine(){
 
 
 bool isPositionFree(int x, int y){
-    if (grid.at(y)[x] == '_'){
-        return true;
+    for(Player player: players){
+        if(grid.at(y)[x] == '#' || (player.getX() == x && player.getY() == y)){
+            return false;
+        }
     }
-    return false;
+    return true;
 }
 
 void initPlayers(){
@@ -115,8 +117,8 @@ void initPlayers(){
     for (int i = 0; i < nbPlayers; i++) {
         Player player = Player(i+1);
         do{
-            int x = getRandom(1,WIDTH-1);
-            int y = getRandom(1,HEIGHT-1);
+            int x = getRandom(1,WIDTH-2);
+            int y = getRandom(1,HEIGHT-2);
             player.setX(x);
             player.setY(y);
         }while(isPositionFree(player.getX(),player.getY()) == false);
@@ -166,16 +168,33 @@ int getPlayerIndex(int id){
 
 void addBombsToGrid(){
     for (Bomb bomb : bombs) {
-        if(bomb.getTimer() == 1){
+        if(bomb.getTimer() >= 1){
             addElement(bomb.getX(), bomb.getY(), "o");
         }
     }
 }
 
+void printBombs(){
+    for(Bomb bomb : bombs){
+        println("[Bomb " + intStr(bomb.getX()) + ":" + intStr(bomb.getY()) + " | " + intStr(bomb.getTimer()) + "]");
+    }
+}
+void printPlayers(){
+    for(Player player : players){
+        if(player.isAlive()){
+            println("[Player [" + intStr(player.getId()) + "] "  + intStr(player.getX()) + ":" + intStr(player.getY()) + " | " + player.getLastMovement() + "]");
+        }else{
+            println("[DEAD " + intStr(player.getX()) + ":" + intStr(player.getY()) + " | " + player.getLastMovement() + "]");
+        }
+    }
+}
+
 void refreshGrid(){
+    //printBombs();
+    //printPlayers();
     initGrid();
-    addPlayerToGrid();
     addBombsToGrid();
+    addPlayerToGrid();
 }
 
 void reinitBombers(){
@@ -389,9 +408,9 @@ int main() {
                     std::string action = input();
                     if(action == expectInput)
                         break;
-                    //if(isPlayerAlive(i)){
+                    if(isPlayerAlive(i)){
                         execActions(action, i);
-                    //}
+                    }
                 }
             }
         }

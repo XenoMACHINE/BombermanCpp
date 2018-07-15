@@ -67,8 +67,8 @@ void Player::goRight() {
     std::cout << "R" << std::endl;
 }
 
-void Player::randomAction() {
-    int nbActions = getRandom(1,3);
+void Player::randomAction(int maxActions) {
+    int nbActions = getRandom(1,maxActions);
     for (int i=0; i<nbActions; i++){
         switch (getRandom(0,5)){
             case 0:

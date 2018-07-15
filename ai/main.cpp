@@ -23,6 +23,12 @@ void println(std::string message, int number){
     std::cout << message << number << std::endl;
 }
 
+void sendGrid(){
+    for (int i = 0; i < height; i++) {
+        println(grid.at(i));
+    }
+}
+
 std::string input(){
     std::string message;
     std::getline(std::cin, message);
@@ -155,27 +161,6 @@ int main() {
     while (true){
         std::string message;
 
-        /*grid.push_back("####################");
-        grid.push_back("#__________________#");
-        grid.push_back("#___o______________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#_____________o____#");
-        grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#_________________o#");
-        grid.push_back("#______o___________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#_____________o____#");
-        grid.push_back("#__________________#");
-        grid.push_back("#______________o___#");
-        grid.push_back("#_____________1____#");
-        grid.push_back("#__________________#");
-        grid.push_back("#___o______________#");
-        grid.push_back("#__________________#");
-        grid.push_back("#__________________#");
-        grid.push_back("####################");*/
-
         std::string expectedInput = "START turn " + intStr(turn);
         if(nextInputMustBe(expectedInput)) {
             //TODO set grid ect
@@ -184,22 +169,20 @@ int main() {
             std::cin >> message;
             height = std::stoi(message);
 
-            for (int j = 0; j < height; j++) {
-                std::getline(std::cin, message);
-                grid.push_back(message);
+            std::string stopTurnInput = "STOP turn " + intStr(turn);
+            while (true){
+                std::string inputGrid = input();
+                if(inputGrid == stopTurnInput)
+                    break;
+                if(inputGrid.size() == width){
+                    grid.push_back(inputGrid);
+                }
             }
-
-
-
-            expectedInput = "STOP turn " + intStr(turn);
-            nextInputMustBe(expectedInput);
         }
 
         player.startAction(turn);
 
 
-        player.randomAction();
-        /*
         string resDecision = IaAlgorithm(height, width);
 
         for (auto c : resDecision)
@@ -212,18 +195,18 @@ int main() {
                 player.goUp();
             if (c == '3')
                 player.goLeft();
-            if (turn % 3 == 0)
-                player.sendBomb();
         }
-        /*player.randomAction();
-        player.goUp();
+
+        if (turn % 3 == 0)
+            player.randomAction(1);
+
+        /*
+        player.randomAction(1);
         if(turn % 2 == 0){
             player.sendBomb();
-            player.goDown();
-            player.goLeft();
-            player.goDown();
-        }*/
-
+            player.randomAction(2);
+        }
+        */
 
         player.stopAction(turn);
         turn += 1;
