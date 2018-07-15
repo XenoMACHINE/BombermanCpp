@@ -2,6 +2,7 @@
 // Created by Nam Nguyen on 13/07/2018.
 //
 
+#include <cstdlib>
 #include "Astar.h"
 
 
@@ -81,34 +82,38 @@ bool operator < (const node &a, const node &b)
 
 void Astar::searchDestination(vector<vector<int>> map_decision)
 {
-    while (true)
+    bool isFind = false;
+    for (int index = 1; index < 3; index++)
     {
-        int index = 1;
-        if ((xPlayer + index < m) && (xPlayer - index > 0) &&
-            (yPlayer + index < n) && (yPlayer - index > 0))
+        if (((xPlayer + index < m) && (xPlayer - index >= 0)) &&
+            ((yPlayer + index < n) && (yPlayer - index >= 0)))
         {
             if (map_decision[this->xPlayer][this->yPlayer + index] == 0)
             {
                 this->xDest = this->xPlayer;
                 this->yDest = this->yPlayer + index;
+                isFind = true;
                 break;
             }
             if (map_decision[this->xPlayer][this->yPlayer - index] == 0)
             {
                 this->xDest = this->xPlayer;
                 this->yDest = this->yPlayer - index;
+                isFind = true;
                 break;
             }
             if (map_decision[this->xPlayer + index][this->yPlayer] == 0)
             {
                 this->xDest = this->xPlayer + index;
                 this->yDest = this->yPlayer;
+                isFind = true;
                 break;
             }
             if (map_decision[this->xPlayer - index][this->yPlayer + index] == 0)
             {
                 this->xDest = this->xPlayer - index;
                 this->yDest = this->yPlayer;
+                isFind = true;
                 break;
             }
 
@@ -116,36 +121,38 @@ void Astar::searchDestination(vector<vector<int>> map_decision)
             {
                 this->xDest = this->xPlayer - index;
                 this->yDest = this->yPlayer + index;
+                isFind = true;
                 break;
             }
             if (map_decision[this->xPlayer + index][this->yPlayer + index] == 0)
             {
                 this->xDest = this->xPlayer + index;
                 this->yDest = this->yPlayer + index;
+                isFind = true;
                 break;
             }
             if (map_decision[this->xPlayer + index][this->yPlayer - index] == 0)
             {
                 this->xDest = this->xPlayer + index;
                 this->yDest = this->yPlayer - index;
+                isFind = true;
                 break;
             }
             if (map_decision[this->xPlayer - index][this->yPlayer - index] == 0)
             {
                 this->xDest = this->xPlayer - index;
                 this->yDest = this->yPlayer - index;
+                isFind = true;
                 break;
             }
         }
-        if (index == 10000)
-        {
-            this->xDest = this->xPlayer;
-            this->yDest = this->yPlayer;
-            break;
-        }
-
-
     }
+    if (isFind == false)
+    {
+        this->xDest = rand() % this->m - 1;
+        this->yDest = rand() % this->n - 1;;
+    }
+
 }
 
 
