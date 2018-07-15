@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/main.cpp
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/main.cpp
 iostream
 -
 vector
@@ -14,15 +14,15 @@ vector
 stdlib.h
 -
 player/Player.h
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Player.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
 player/Astar.h
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Astar.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.h
 
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Astar.cpp
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.cpp
 Astar.h
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Astar.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.h
 
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Astar.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Astar.h
 iostream
 -
 iomanip
@@ -36,9 +36,9 @@ math.h
 ctime
 -
 
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Player.cpp
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.cpp
 Player.h
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Player.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
 iostream
 -
 iterator
@@ -56,7 +56,7 @@ vector
 queue
 -
 
-/Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/ai/player/Player.h
+/Users/alexandremenielle/Documents/4A/C++/BombermanCpp/ai/player/Player.h
 string
 -
 

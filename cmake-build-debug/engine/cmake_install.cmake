@@ -1,4 +1,4 @@
-# Install script for directory: /Users/zeke/Desktop/Nam/ESGI/C++/BackUp/BombermanCpp/engine
+# Install script for directory: /Users/alexandremenielle/Documents/4A/C++/BombermanCpp/engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
