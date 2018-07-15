@@ -265,11 +265,12 @@ int main() {
         player.randomAction(1);
 
         if (turn % 2 == 0) {
-            player.randomAction(1);
+            player.randomAction(2);
         }
 
         if(turn % 3 == 0){
             player.sendBomb();
+            player.randomMov(4);
         }
 
         /*

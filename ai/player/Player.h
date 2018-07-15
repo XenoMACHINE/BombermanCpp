@@ -20,6 +20,7 @@ public:
     void goLeft();
     void goRight();
     void randomAction(int maxActions);
+    void randomMov(int maxActions);
     void doNothing() const;
     void startAction(const int& turn) const;
     void stopAction(const int& turn) const;

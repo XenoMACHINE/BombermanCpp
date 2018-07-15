@@ -94,6 +94,27 @@ void Player::randomAction(int maxActions) {
     std::cout << "R" << std::endl;
 }
 
+void Player::randomMov(int maxActions) {
+    int nbActions = getRandom(1,maxActions);
+    for (int i=0; i<nbActions; i++){
+        switch (getRandom(0,4)){
+            case 0:
+                goUp();
+                break;
+            case 1:
+                goDown();
+                break;
+            case 2:
+                goRight();
+                break;
+            case 3:
+                goLeft();
+                break;
+        }
+    }
+    std::cout << "R" << std::endl;
+}
+
 void expectMessage(const std::string& message) {
     std::string input;
     std::getline(std::cin, input);
