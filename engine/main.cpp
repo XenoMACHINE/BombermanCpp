@@ -4,9 +4,9 @@
 #include "player/Player.h"
 #include "bomb/Bomb.h"
 
-int WIDTH = 10;
-int HEIGHT = 10;
-int DELAY = 2;
+int WIDTH = 15;
+int HEIGHT = 15;
+int DELAY = 3;
 int RADIUS = 3;
 int BOMBS = 10;
 
