@@ -160,9 +160,7 @@ string IaAlgorithm(int height, int width)
 
     return resultPath;
 
-
 }
-
 
 
 int main() {
@@ -212,6 +210,7 @@ int main() {
             height = std::stoi(message);
 
             std::string stopTurnInput = "STOP turn " + intStr(turn);
+            grid.clear();
             while (true){
                 std::string inputGrid = input();
                 if(inputGrid == stopTurnInput)
@@ -247,7 +246,6 @@ int main() {
 
         player.startAction(turn);
 
-
         string resDecision = IaAlgorithm(height, width);
 
         for (auto c : resDecision)
@@ -262,7 +260,7 @@ int main() {
                 player.goLeft();
         }
 
-        if (turn % 3 == 0)
+        if (turn % 2 == 0)
             player.randomAction(1);
 
         /*

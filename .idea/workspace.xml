@@ -13,6 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="534cff4d-d9b3-41d5-b6f6-fcd16f36c438" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ai/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ai/player/Astar.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ai/player/Astar.cpp" afterDir="false" />
@@ -45,6 +46,11 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine/engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine/engine" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/engine/engine.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/engine/engine.cbp" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/ai/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ai/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bomberman.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/bomberman.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/engine/main.cpp" afterDir="false" />
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +66,16 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ai/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="262" column="9" lean-forward="true" selection-start-line="262" selection-start-column="9" selection-end-line="262" selection-end-column="9" />
+=======
+            <state relative-caret-position="434">
+              <caret line="191" column="25" lean-forward="true" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
             </state>
           </provider>
         </entry>
@@ -69,8 +83,13 @@
       <file leaf-file-name="Astar.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ai/player/Astar.cpp">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1380">
               <caret line="92" selection-start-line="92" selection-end-line="92" />
+=======
+            <state relative-caret-position="150">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
               <folding>
                 <element signature="e#47#65#0" expanded="true" />
               </folding>
@@ -78,8 +97,70 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine/main.cpp">
+=======
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ai/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="75" selection-start-line="5" selection-end-line="5" selection-end-column="93" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/player/Player.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/engine/player/Player.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <folding>
+                <element signature="e#55#73#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bomberman.cfg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bomberman.cfg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ai/player/Player.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ai/player/Player.cpp">
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
               <caret line="45" column="29" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="29" />
@@ -113,8 +194,8 @@
       <find>initpla</find>
       <find>grid</find>
       <find>START settings</find>
-      <find>sendgr</find>
       <find>stoi</find>
+      <find>sendgr</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -131,6 +212,7 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/ai/player/Player.cpp" />
         <option value="$PROJECT_DIR$/ai/player/Player.h" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/engine/main.cpp" />
         <option value="$PROJECT_DIR$/ai/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/engine/CMakeLists.txt" />
@@ -138,6 +220,11 @@
         <option value="$PROJECT_DIR$/../../BombermanCpp/ai/player/Astar.cpp" />
         <option value="$PROJECT_DIR$/ai/player/Astar.cpp" />
         <option value="$PROJECT_DIR$/ai/main.cpp" />
+=======
+        <option value="$PROJECT_DIR$/bomberman.cfg" />
+        <option value="$PROJECT_DIR$/ai/main.cpp" />
+        <option value="$PROJECT_DIR$/engine/main.cpp" />
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
       </list>
     </option>
   </component>
@@ -221,7 +308,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.Build All">
+=======
+  <component name="RunManager" selected="Application.engine">
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BombermanCpp" RUN_TARGET_NAME="ai" EXPLICIT_BUILD_TARGET_NAME="all" />
     <configuration name="ai" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BombermanCpp" TARGET_NAME="ai" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BombermanCpp" RUN_TARGET_NAME="ai" />
     <configuration name="engine" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BombermanCpp" TARGET_NAME="engine" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="BombermanCpp" RUN_TARGET_NAME="engine" />
@@ -249,12 +340,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="74359000" />
+=======
+    <option name="totallyTimeSpent" value="70705000" />
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18055555" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info active="true" anchor="bottom" id="Messages" order="19" sideWeight="0.49930555" visible="true" weight="0.3424284" />
@@ -262,6 +358,15 @@
       <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.50069445" side_tool="true" weight="0.34199727" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.26603" />
       <window_info anchor="bottom" id="Version Control" order="15" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24738345" />
+      <window_info anchor="bottom" id="TODO" order="9" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.26687765" />
+      <window_info anchor="bottom" id="CMake" order="14" weight="0.39345992" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.12236287" />
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="17" sideWeight="0.49930555" weight="0.32968536" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.38744885" />
@@ -529,6 +634,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/engine/player/Player.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -543,6 +649,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
     <entry file="file://$PROJECT_DIR$/ai/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -581,6 +689,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ai/player/Astar.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -592,6 +701,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/bomberman.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="91" selection-start-line="5" selection-start-column="91" selection-end-line="5" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/engine/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
         </state>
       </provider>
     </entry>
@@ -607,8 +739,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="243">
           <caret line="45" column="29" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="29" />
+=======
+        <state relative-caret-position="434">
+          <caret line="191" column="25" lean-forward="true" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
+>>>>>>> d1e7b188d2066cea05e21e516ba2468e13b0aa94
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
