@@ -12,7 +12,11 @@ int idPlayer = 0;
 int width = 0;
 int height = 0;
 std::vector<std::string> grid;
-int radius = 4;
+
+
+int number_Bombs;
+int duration_Bombs;
+int radius_Bombs = 2;
 
 
 void println(std::string message){
@@ -48,22 +52,39 @@ std::string intStr(int i){
     return std::to_string(i);
 }
 
+int MyCharToInt(char nbChar)
+{
+    switch (nbChar)
+    {
+        case '0':
+            return 0;
+        case '1':
+            return 1;
+        case '2':
+            return 2;
+        case '3':
+            return 3;
+        case '4':
+            return 4;
+        case '5':
+            return 5;
+        case '6':
+            return 6;
+        case '7':
+            return 7;
+        case '8':
+            return 8;
+        case '9':
+            return 9;
+        default:
+            return 0;
+    }
+}
 
 string IaAlgorithm(int height, int width)
 {
     vector<vector<int>> map(width, vector<int>(height, 0));
     vector<vector<int>> map_decision(width, vector<int>(height, 0));
-
-
-    //Setting map
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            map[i][j] = 0;
-            map_decision[i][j] = 0;
-        }
-    }
 
     int xPlayer;
     int yPlayer;
@@ -94,7 +115,7 @@ string IaAlgorithm(int height, int width)
                         map[indexH][index] = 1;
                         map_decision[indexH][index] = 1;
 
-                        for (int h = 1; h <= radius; h++)
+                        for (int h = 1; h <= radius_Bombs; h++)
                         {
                             if (indexH + h < height)
                                 map_decision[indexH + h][index] = 1;
@@ -107,10 +128,18 @@ string IaAlgorithm(int height, int width)
                         }
                         break;
                     default: //Player
-                        map[indexH][index] = 2;
-                        map_decision[indexH][index] = 2;
-                        xPlayer = indexH;
-                        yPlayer = index;
+                        if (MyCharToInt(c) == idPlayer)
+                        {
+                            map[indexH][index] = 2;
+                            map_decision[indexH][index] = 2;
+                            xPlayer = indexH;
+                            yPlayer = index;
+                        }
+                        else
+                        {
+                            map[indexH][index] = 1;
+                            map_decision[indexH][index] = 1;
+                        }
                         break;
                 }
             }
@@ -152,7 +181,21 @@ int main() {
         std::string inputSetting;
         do {
             std::getline(std::cin, inputSetting);
-            //TODO use settings
+            if (inputSetting.substr(0, inputSetting.find(" ")) == "NB_BOMBS")
+            {
+                string nbStr = inputSetting.substr(1, inputSetting.find(" "));
+                number_Bombs = stoi(nbStr);
+            }
+            if (inputSetting.substr(0, inputSetting.find(" ")) == "BOMB_DURATION")
+            {
+                string nbStr = inputSetting.substr(1, inputSetting.find(" "));
+                duration_Bombs = stoi(nbStr);
+            }
+            if (inputSetting.substr(0, inputSetting.find(" ")) == "BOMB_RADIUS")
+            {
+                string nbStr = inputSetting.substr(1, inputSetting.find(" "));
+                radius_Bombs = stoi(nbStr);
+            }
         } while(inputSetting != "STOP settings");
     }
 
@@ -163,7 +206,6 @@ int main() {
 
         std::string expectedInput = "START turn " + intStr(turn);
         if(nextInputMustBe(expectedInput)) {
-            //TODO set grid ect
             std::cin >> message;
             width = std::stoi(message);
             std::cin >> message;
@@ -179,6 +221,29 @@ int main() {
                 }
             }
         }
+
+        /*grid.push_back("####################");
+        grid.push_back("#__________________#");
+        grid.push_back("#___o______________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_____________o____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#_________________o#");
+        grid.push_back("#______o___________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#____2_____________#");
+        grid.push_back("#_____________o____#");
+        grid.push_back("#__________________#");
+        grid.push_back("#______________o___#");
+        grid.push_back("#1_________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#___o______________#");
+        grid.push_back("#__________________#");
+        grid.push_back("#__________________#");
+        grid.push_back("####################");
+        width = 20;
+        height = 20;*/
 
         player.startAction(turn);
 
