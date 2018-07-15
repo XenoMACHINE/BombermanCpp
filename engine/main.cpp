@@ -11,6 +11,8 @@ int RADIUS = 3;
 int BOMBS = 10;
 
 int nbPlayers = 0;
+std::vector<std::string> emptyGrid;
+
 std::vector<std::string> grid;
 std::vector<Player> players;
 std::vector<Bomb> bombs;
@@ -96,9 +98,17 @@ std::string getWallLine(){
 
 std::string getLine(){
     std::string line = "#";
+    int nbRandomWall = getRandom(0,WIDTH/3);
+
     for (int i = 1; i < WIDTH-1; i++) {
         line += "_";
     }
+
+    for(int i=0; i<nbRandomWall; i++){
+        int randomPos = getRandom(1,WIDTH-1);
+        line[randomPos] = '#';
+    }
+
     return line + "#";
 }
 
@@ -137,14 +147,20 @@ void addPlayerToGrid(){
     }
 }
 
+void initEmptyGrid(){
+    emptyGrid.push_back(getWallLine());
+    for (int i = 1; i < HEIGHT-1; i++) {
+        emptyGrid.push_back(getLine());
+    }
+    emptyGrid.push_back(getWallLine());
+}
+
 void initGrid(){
     std::string line;
     grid.clear();
-    grid.push_back(getWallLine());
-    for (int i = 1; i < HEIGHT-1; i++) {
-        grid.push_back(getLine());
+    for(std::string line : emptyGrid){
+        grid.push_back(line);
     }
-    grid.push_back(getWallLine());
 }
 
 bool isPlayerAlive(int id){
@@ -258,9 +274,13 @@ void updateBombs(){
             int yBomb = bomb.getY();
             for (int x = bomb.getX() - RADIUS; x < bomb.getX() + RADIUS; x++) {
                 if(yBomb < grid.size() && x < grid.at(yBomb).size()){
-                    if (grid.at(yBomb)[x] != '_' && grid.at(yBomb)[x] != 'o' && grid.at(yBomb)[x] != '#'){
-                        int index = getPlayerIndex(x,yBomb);
-                        players.at(index).setAlive(false);
+                    if (grid.at(yBomb)[x] != '_' && grid.at(yBomb)[x] != 'o'){
+                        if( grid.at(yBomb)[x] == '#'){
+                            emptyGrid.at(yBomb)[x] = '_';
+                        }else{
+                            int index = getPlayerIndex(x,yBomb);
+                            players.at(index).setAlive(false);
+                        }
                     }
                 }
             }
@@ -269,9 +289,13 @@ void updateBombs(){
             int xBomb = bomb.getX();
             for (int y = bomb.getY() - RADIUS; y < bomb.getY() + RADIUS; y++) {
                 if(y < grid.size() && xBomb < grid.at(yBomb).size()) {
-                    if (grid.at(y)[xBomb] != '_' && grid.at(y)[xBomb] != 'o' && grid.at(y)[xBomb] != '#'){
-                        int index = getPlayerIndex(xBomb,y);
-                        players.at(index).setAlive(false);
+                    if (grid.at(y)[xBomb] != '_' && grid.at(y)[xBomb] != 'o'){
+                        if(grid.at(y)[xBomb] == '#'){
+                            emptyGrid.at(y)[xBomb] = '_';
+                        }else{
+                            int index = getPlayerIndex(xBomb,y);
+                            players.at(index).setAlive(false);
+                        }
                     }
                 }
             }
@@ -377,6 +401,7 @@ int main() {
     nbPlayers = std::stoi(input());
     nextInputMustBe("STOP PLAYERS");
 
+    initEmptyGrid();
     initGrid();
     initPlayers();
     addPlayerToGrid();

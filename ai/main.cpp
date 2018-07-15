@@ -195,8 +195,13 @@ int main() {
                 player.goLeft();
         }
 
-        if (turn % 2 == 0)
+        if (turn % 2 == 0) {
             player.randomAction(1);
+        }
+
+        if(turn % 3 == 0){
+            player.sendBomb();
+        }
 
         /*
         player.randomAction(1);
