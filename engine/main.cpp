@@ -4,9 +4,9 @@
 #include "player/Player.h"
 #include "bomb/Bomb.h"
 
-int WIDTH = 20;
-int HEIGHT = 20;
-int DELAY = 1;
+int WIDTH = 10;
+int HEIGHT = 10;
+int DELAY = 2;
 int RADIUS = 3;
 int BOMBS = 10;
 
@@ -143,6 +143,15 @@ void initGrid(){
         grid.push_back(getLine());
     }
     grid.push_back(getWallLine());
+}
+
+bool isPlayerAlive(int id){
+    for (Player player : players){
+        if(player.getId() == id){
+            return player.isAlive();
+        }
+    }
+    return false;
 }
 
 
@@ -356,7 +365,7 @@ int main() {
         reinitBombers();
         updateBombs();
         for(int i=1; i<nbPlayers+1;i++){
-            //if (players.at(getPlayerIndex(i)).isAlive()){ continue; }  //bloquer ici ?
+            //if (!players.at(getPlayerIndex(i)).isAlive()){ continue; }  //bloquer ici ?
             std::cout << "START turn " << turn << " " << i << std::endl;
             if(nbPlayersAlive() <= 1 && players.at(getPlayerIndex(i)).isAlive()){
                 println("WINNER ", i);
@@ -374,7 +383,9 @@ int main() {
                     std::string action = input();
                     if(action == expectInput)
                         break;
-                    execActions(action, i);
+                    if(isPlayerAlive(i)){
+                        execActions(action, i);
+                    }
                 }
             }
         }
